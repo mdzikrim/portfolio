@@ -79,10 +79,10 @@ export const profile = {
       items: [
         "Flask",
         "Django REST Framework",
+        "React",
         "Kotlin / Android",
+        "PostgreSQL / PostGIS",
         "Git & GitHub",
-        "SQLite / PostgreSQL",
-        "Jupyter",
       ],
     },
   ],

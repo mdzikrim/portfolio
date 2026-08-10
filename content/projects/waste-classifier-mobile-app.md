@@ -8,7 +8,7 @@ tags: ["Kotlin", "Android", "TensorFlow", "MobileNetV2", "Flask", "Room", "OkHtt
 cover: ""
 featured: true
 draft: false
-order: 2
+order: 3
 links:
   repo: "https://github.com/mdzikrim/Waste-Classifier-Mobile-App"
   demo: ""
