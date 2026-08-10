@@ -3,14 +3,14 @@ title: "Bandung Healthcare Facility Map"
 summary: "A web GIS that maps every hospital, puskesmas, and primary clinic in Bandung — filterable by BPJS acceptance, hospital class, and specialty, with a geolocation-based 'what's near me' search."
 category: "Web GIS"
 year: "2026"
-role: "Co-developer · 2-person team"
+role: "Full-stack Developer · 2-person team"
 tags: ["React", "Leaflet", "Django REST", "PostGIS", "GeoDjango", "Vite", "Tailwind"]
 cover: ""
 featured: true
 draft: false
 order: 2
 links:
-  repo: ""
+  repo: "https://github.com/mdzikrim/persebaran-faskes-bandung"
   demo: ""
   article: ""
 highlights:
@@ -31,10 +31,12 @@ The data to answer all of that is public — Open Data Jawa Barat publishes it. 
 as spreadsheets: rows of coordinates with no map, no filters, and no way to ask "what is within
 two kilometers of where I am standing right now." A CSV is not an answer to a medical question.
 
-This was our final project for **Teknologi Pemetaan Berbasis Web** (Web-Based Mapping Technology)
-at Telkom University, built as a two-person team.
+This was my final project for **Teknologi Pemetaan Berbasis Web** (Web-Based Mapping Technology)
+at Telkom University. It was a two-person team, and I built the system end to end — the PostGIS
+schema, the GeoJSON API, the data pipeline, and the React map — alongside Muhammad Ariq Fauzy
+Shidqi.
 
-## What we built
+## What I built
 
 A full-stack web GIS covering all three tiers of Indonesian public healthcare:
 
@@ -121,13 +123,13 @@ curated by hand, because they simply are not in the open dataset.
 
 ## Beyond the assignment
 
-Two things we added that the brief didn't ask for:
+Two things I added that the brief didn't ask for:
 
 **Bilingual UI (Indonesian/English) and a dark theme.** A healthcare map that only works in one
 language is a smaller map than it needs to be.
 
 **A submission form.** Any dataset of clinics goes stale within months. `SubmitFaskes` lets a
-visitor report a facility we missed, with a map picker for the coordinates.
+visitor report a facility the dataset missed, with a map picker for the coordinates.
 
 ## Honest limitations
 
