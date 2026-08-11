@@ -20,10 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: project.title,
     description: project.summary,
+    // `images` is deliberately omitted: setting it here — even to undefined —
+    // overrides the generated card in opengraph-image.tsx.
     openGraph: {
       title: project.title,
       description: project.summary,
-      images: project.cover ? [project.cover] : undefined,
     },
   };
 }
