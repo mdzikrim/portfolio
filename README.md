@@ -57,11 +57,13 @@ Untuk mengganti CV: taruh PDF baru di `public/`, lalu sesuaikan `profile.cv.href
 
 1. Push repo ini ke GitHub.
 2. Buka [vercel.com/new](https://vercel.com/new), import repo-nya. Vercel mendeteksi Next.js
-   otomatis — tidak ada konfigurasi yang perlu diisi.
-3. Setelah dapat domain (misal `dzikri.vercel.app`), buka `src/app/layout.tsx` dan ganti
-   `metadataBase` dengan URL tersebut supaya preview link di LinkedIn/WhatsApp benar.
+   otomatis — tidak ada konfigurasi atau environment variable yang perlu diisi.
 
 Setiap `git push` berikutnya otomatis men-deploy ulang.
+
+Kalau nanti pakai domain sendiri, set environment variable `NEXT_PUBLIC_SITE_URL` di Vercel
+(misal `https://dzikri.com`). Tanpa itu, `metadataBase` otomatis memakai domain produksi Vercel,
+jadi preview link di LinkedIn/WhatsApp tetap benar.
 
 ## Perintah
 

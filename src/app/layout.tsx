@@ -17,8 +17,23 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+/**
+ * Absolute base for OG images and canonical links.
+ *
+ * Resolved automatically so there is nothing to edit after deploying:
+ * a custom domain via NEXT_PUBLIC_SITE_URL, otherwise the Vercel production
+ * domain, otherwise localhost for `npm run dev`.
+ */
+function resolveSiteUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  return "http://localhost:3000";
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.vercel.app"), // TODO: replace after deploying
+  metadataBase: new URL(resolveSiteUrl()),
   title: {
     default: `${profile.name} — ${profile.role}`,
     template: `%s — ${profile.shortName}`,
