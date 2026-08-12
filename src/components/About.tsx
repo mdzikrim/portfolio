@@ -2,6 +2,22 @@ import { profile } from "@content/profile";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
 
+/**
+ * Renders *asterisk emphasis* in bio paragraphs. Just enough Markdown to let
+ * profile.ts stress a word, without pulling a parser into the About section.
+ */
+function withEmphasis(text: string) {
+  return text.split(/(\*[^*]+\*)/g).map((part, i) =>
+    part.startsWith("*") && part.endsWith("*") && part.length > 2 ? (
+      <em key={i} className="text-fg not-italic underline decoration-accent/50 underline-offset-4">
+        {part.slice(1, -1)}
+      </em>
+    ) : (
+      part
+    ),
+  );
+}
+
 export function About() {
   return (
     <Section
@@ -14,7 +30,7 @@ export function About() {
         <Reveal className="space-y-5">
           {profile.bio.map((paragraph) => (
             <p key={paragraph.slice(0, 24)} className="leading-relaxed text-muted">
-              {paragraph}
+              {withEmphasis(paragraph)}
             </p>
           ))}
 
