@@ -84,6 +84,129 @@ body {
   transform: none;
 }
 
+/* Animated stand-ins on project cards without a screenshot (ProjectVisual). */
+@keyframes pv-bar {
+  0%,
+  100% {
+    transform: scaleY(0.22);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes pv-caret {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(180px);
+  }
+}
+
+@keyframes pv-ring {
+  0% {
+    transform: scale(0.18);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pv-pin {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes pv-scan {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(90px);
+  }
+}
+
+@keyframes pv-trace {
+  0% {
+    stroke-dashoffset: 460;
+  }
+  55%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pv-grow {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes pv-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -8px);
+  }
+}
+
+.pv-bar,
+.pv-grow {
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+.pv-bar {
+  animation: pv-bar 2.6s ease-in-out infinite;
+}
+
+.pv-grow {
+  animation: pv-grow 3s ease-in-out infinite;
+}
+
+.pv-caret {
+  animation: pv-caret 2.6s ease-in-out infinite;
+}
+
+.pv-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pv-ring 3.3s ease-out infinite;
+}
+
+.pv-pin {
+  animation: pv-pin 3s ease-in-out infinite;
+}
+
+.pv-scan {
+  animation: pv-scan 3.8s ease-in-out infinite;
+}
+
+.pv-trace {
+  stroke-dasharray: 460;
+  animation: pv-trace 4.2s ease-in-out infinite;
+}
+
+.pv-drift {
+  animation: pv-drift 5s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -92,6 +215,20 @@ body {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .pv-bar,
+  .pv-grow,
+  .pv-caret,
+  .pv-ring,
+  .pv-pin,
+  .pv-scan,
+  .pv-trace,
+  .pv-drift {
+    animation: none;
+  }
+  /* Without the loop, the ring would sit at its 0.18 start scale. */
+  .pv-ring {
+    opacity: 0.3;
   }
 }
 

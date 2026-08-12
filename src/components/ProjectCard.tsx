@@ -1,17 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ProjectMeta } from "@/lib/projects";
-
-/** Deterministic hue per project so cover-less cards still look intentional. */
-function hueFor(slug: string) {
-  let hash = 0;
-  for (const char of slug) hash = (hash * 31 + char.charCodeAt(0)) % 360;
-  return hash;
-}
+import { ProjectVisual } from "./ProjectVisual";
 
 export function ProjectCard({ project }: { project: ProjectMeta }) {
-  const hue = hueFor(project.slug);
-
   return (
     <Link
       href={`/projects/${project.slug}`}
@@ -27,20 +19,7 @@ export function ProjectCard({ project }: { project: ProjectMeta }) {
             className="object-cover transition duration-500 group-hover:scale-[1.04]"
           />
         ) : (
-          <div
-            className="absolute inset-0 grid place-items-center"
-            style={{
-              backgroundImage: `radial-gradient(120% 100% at 20% 0%, hsl(${hue} 70% 55% / 0.22), transparent 60%)`,
-            }}
-          >
-            <span className="font-mono text-5xl font-semibold text-fg/10 select-none">
-              {project.title
-                .split(" ")
-                .slice(0, 3)
-                .map((word) => word.charAt(0))
-                .join("")}
-            </span>
-          </div>
+          <ProjectVisual project={project} />
         )}
         <span className="absolute top-3 left-3 rounded-full border border-line bg-bg/85 px-2.5 py-1 font-mono text-[0.68rem] tracking-wide text-muted backdrop-blur">
           {project.category}
