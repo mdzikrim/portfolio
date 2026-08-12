@@ -108,13 +108,13 @@ export const profile = {
     {
       role: "Laboratory Assistant",
       org: "Security Laboratory (SECULAB), Telkom University",
-      period: "Dec 2025 — Present",
+      period: "Sep 2025 — Aug 2026",
       location: "Bandung, Indonesia",
       points: [
-        "Teach core practical modules: ethical hacking, firewall implementation, and secure coding.",
-        "Maintain lab infrastructure for penetration testing, network monitoring, and vulnerability assessment sessions.",
-        "Build and maintain virtual environments that simulate varied cybersecurity scenarios.",
-        "Co-develop training material on cryptography, digital forensics, and web application security with instructors.",
+        "Taught core practical modules: ethical hacking, firewall implementation, and secure coding.",
+        "Maintained lab infrastructure for penetration testing, network monitoring, and vulnerability assessment sessions.",
+        "Built and maintained virtual environments that simulate varied cybersecurity scenarios.",
+        "Co-developed training material on cryptography, digital forensics, and web application security with instructors.",
       ],
     },
     {
