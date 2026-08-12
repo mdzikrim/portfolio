@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const LINK_LABELS: Record<string, string> = {
-  repo: "Source code",
+  repo: "GitHub",
   demo: "Live demo",
   article: "Write-up",
   video: "Demo video",
