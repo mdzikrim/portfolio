@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { profile } from "@content/profile";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
@@ -28,11 +29,35 @@ export function About() {
     >
       <div className="grid gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
         <Reveal className="space-y-5">
-          {profile.bio.map((paragraph) => (
-            <p key={paragraph.slice(0, 24)} className="leading-relaxed text-muted">
-              {withEmphasis(paragraph)}
-            </p>
-          ))}
+          <div className="flex flex-col gap-7 sm:flex-row sm:items-start">
+            {profile.photo && (
+              <div className="group/photo relative w-40 shrink-0 sm:w-52">
+                {/* Offset accent card behind the portrait, so it reads as a
+                    composed element rather than a pasted ID photo. */}
+                <div
+                  className="absolute inset-0 -rotate-6 rounded-2xl bg-accent/15 transition-transform duration-500 group-hover/photo:-rotate-3"
+                  aria-hidden
+                />
+                <Image
+                  src={profile.photo}
+                  alt={profile.name}
+                  width={880}
+                  height={1100}
+                  sizes="(min-width: 640px) 208px, 160px"
+                  className="relative rotate-2 rounded-2xl border border-line object-cover transition-transform duration-500 group-hover/photo:rotate-0"
+                  priority
+                />
+              </div>
+            )}
+
+            <div className="space-y-5">
+              {profile.bio.map((paragraph) => (
+                <p key={paragraph.slice(0, 24)} className="leading-relaxed text-muted">
+                  {withEmphasis(paragraph)}
+                </p>
+              ))}
+            </div>
+          </div>
 
           <div className="pt-4">
             <h3 className="font-mono text-xs tracking-[0.18em] text-accent uppercase">Education</h3>

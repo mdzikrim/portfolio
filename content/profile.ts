@@ -22,9 +22,13 @@ export const profile = {
 
   // Longer bio for the About section. Each string is a paragraph.
   bio: [
-    "My background is Computer Engineering, and my work sits between machine learning, data analysis, and security. Most of it has involved taking a model out of a notebook and making it part of something a person can actually operate.",
-    "That transition is where projects usually stall, and it is the part I have gotten better at: reconciling data that disagrees with itself, checking whether a good score is real before reporting it, and building the interface that decides whether any of the work gets used. I try to be direct about limits too. If an accuracy number looks too clean, I would rather explain why in the README than let it stand.",
+    "I build machine learning systems and the software that surrounds them, across behavioral biometrics, computer vision, and geospatial applications. The domains differ but the shape of the problem does not: make the data honest, make the model defensible, then put it somewhere people can reach it.",
+    "I am most useful in the middle of that process, where a project either becomes real or quietly stalls.",
   ],
+
+  // Portrait shown in the About section. Put the file in `public/`.
+  // Set to an empty string to hide the photo entirely.
+  photo: "/dzikri.jpg",
 
   // Contact + social. Leave a value as an empty string to hide that link.
   email: "muhamaddzikri2004@gmail.com",
