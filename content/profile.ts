@@ -22,8 +22,8 @@ export const profile = {
 
   // Longer bio for the About section. Each string is a paragraph.
   bio: [
-    "I work where machine learning, data analysis, and security meet. Most of what I build starts as a question rather than a spec: can a model tell *who* is typing, not just *what* was typed? Can a phone sort household waste well enough to be useful? Can a spreadsheet of coordinates become something a person could rely on during an emergency?",
-    "My comfort zone is the full lifecycle — collecting and cleaning the dataset, training and evaluating the model, then wrapping it in something a person can actually click. I care about being honest with results: if a 99% accuracy number smells like overfitting, I'd rather say so in the README than hide it.",
+    "My background is Computer Engineering, and my work sits between machine learning, data analysis, and security. Most of it has involved taking a model out of a notebook and making it part of something a person can actually operate.",
+    "That transition is where projects usually stall, and it is the part I have gotten better at: reconciling data that disagrees with itself, checking whether a good score is real before reporting it, and building the interface that decides whether any of the work gets used. I try to be direct about limits too. If an accuracy number looks too clean, I would rather explain why in the README than let it stand.",
   ],
 
   // Contact + social. Leave a value as an empty string to hide that link.
