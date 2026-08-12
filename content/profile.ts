@@ -14,12 +14,15 @@ export const profile = {
   location: "Bandung, West Java, Indonesia",
 
   // One-paragraph pitch on the hero. Two or three sentences max.
+  // Keep this timeless — no job titles, enrollment status, or dates. Those
+  // belong in `experience` and `education` below, where they carry a date range
+  // and can be updated in one place.
   tagline:
-    "I build systems that learn from data — from behavioral biometrics for authentication to computer-vision models running on a phone. Computer Engineering student at Telkom University, security lab assistant, and a stubborn debugger.",
+    "I build systems that learn from data — behavioral biometrics that recognize how someone types, computer-vision models that run on a phone, public datasets turned into maps you can actually search. What I enjoy is the unglamorous middle: cleaning the data, evaluating it honestly, and making the result survive contact with a real user.",
 
   // Longer bio for the About section. Each string is a paragraph.
   bio: [
-    "I'm a Computer Engineering student at Telkom University and a Laboratory Assistant at SECULAB, working at the intersection of data science and cybersecurity. Most of what I build starts as a question: can a model tell *who* is typing, not just *what* was typed? Can a phone sort household waste well enough to actually be useful?",
+    "I work where machine learning, data analysis, and security meet. Most of what I build starts as a question rather than a spec: can a model tell *who* is typing, not just *what* was typed? Can a phone sort household waste well enough to be useful? Can a spreadsheet of coordinates become something a person could rely on during an emergency?",
     "My comfort zone is the full lifecycle — collecting and cleaning the dataset, training and evaluating the model, then wrapping it in something a person can actually click. I care about being honest with results: if a 99% accuracy number smells like overfitting, I'd rather say so in the README than hide it.",
   ],
 
